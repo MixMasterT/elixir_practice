@@ -22,4 +22,4 @@ Add `bash` at the end of the docker run command to enter the shell in bash inste
 >
 > docker run -it --rm --mount type=bind,src=$(pwd),target=/data -v elixir-mix:/root/.mix elixir bash
 >
-Then, within the elixir container, this directory will appear at the path `/data`
+Then, within the elixir container, the current local (host os) directory will appear at the path `/data`
