@@ -1,6 +1,10 @@
 # Identicon
+This module exposes only one method: `main`
 
-**TODO: Add description**
+Call `Identicon.main` with a single string argument.
+
+It will generate a .png file with the same name as the string.
+The file will contain an identicon image that is unique to that name.
 
 ## Installation
 
