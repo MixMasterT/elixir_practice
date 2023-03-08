@@ -5,13 +5,19 @@ defmodule Stack.Server do
     { :ok, initial_content }
   end
 
+  def handle_call(:pop, _from, []), do: {
+    :reply,
+    { :error, ".pop called, but stack was empty" },
+    []
+  }
+
   def handle_call(:pop, _from, current_content) do
     [ first_el | rest ] = current_content
     { :reply, first_el, rest }
   end
 
   def handle_cast({ :push, new_item }, current_content) do
-    { :noreply,[new_item | current_content]}
+    { :noreply, [new_item | current_content]}
   end
 
 end
