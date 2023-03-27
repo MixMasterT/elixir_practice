@@ -8,6 +8,7 @@ defmodule Duper.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Duper.Results,
       # Starts a worker by calling: Duper.Worker.start_link(arg)
       # {Duper.Worker, arg}
     ]
